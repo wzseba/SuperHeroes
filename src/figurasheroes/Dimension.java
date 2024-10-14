@@ -43,7 +43,8 @@ public class Dimension {
 	}
 
 	public double getVolumen() {
-		return getAlto() * getAncho() * getProfundidad();
+		double resultado = getAlto() * getAncho() * getProfundidad();
+		return ((double) Math.round(resultado * 100d) / 100d);
 	}
 
 	@Override
