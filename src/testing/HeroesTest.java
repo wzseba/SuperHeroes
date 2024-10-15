@@ -15,6 +15,7 @@ import figurasheroes.SuperHeroe;
 class HeroesTest {
 
 	private Coleccion coleccion = new Coleccion("Marvel");
+	private Coleccion coleccionConCapa = new Coleccion("Robocop");
 
 	@BeforeEach
 	void setUp() {
@@ -63,5 +64,22 @@ class HeroesTest {
 	@Test
 	void testValorTotalColeccion() {
 		assertEquals(1200, coleccion.getValorColeccion());
+	}
+
+	@Test
+	void testVolumenColeccion() {
+		assertEquals(516, coleccion.getVolumenColeccion());
+	}
+
+	@Test
+	void testMasValiso() {
+		assertEquals(600, coleccion.masValioso().getPrecio());
+	}
+
+	@Test
+	void testConCapa() {
+		SuperHeroe superman = new SuperHeroe("superman");
+		superman.setCapa(true);
+
 	}
 }
