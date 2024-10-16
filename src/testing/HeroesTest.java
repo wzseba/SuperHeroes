@@ -15,7 +15,6 @@ import figurasheroes.SuperHeroe;
 class HeroesTest {
 
 	private Coleccion coleccion = new Coleccion("Marvel");
-	private Coleccion coleccionConCapa = new Coleccion("Robocop");
 
 	@BeforeEach
 	void setUp() {
@@ -80,6 +79,19 @@ class HeroesTest {
 	void testConCapa() {
 		SuperHeroe superman = new SuperHeroe("superman");
 		superman.setCapa(true);
+		SuperHeroe batman = new SuperHeroe("batman");
+		batman.setCapa(true);
+		SuperHeroe pepito = new SuperHeroe("pepito");
+
+		Figura f1 = new Figura("sup556", 50, new Dimension(4, 2, 1), superman);
+		Figura f2 = new Figura("bat458", 50, new Dimension(4, 2, 1), batman);
+		Figura f3 = new Figura("pep638", 40, new Dimension(4, 2, 1), pepito);
+
+		coleccion.addFigura(f1);
+		coleccion.addFigura(f2);
+		coleccion.addFigura(f3);
+
+		assertEquals(2, coleccion.listaConCapa().size());
 
 	}
 }
