@@ -33,12 +33,6 @@ public class Coleccion {
 		}
 	}
 
-	public void listadoFiguras() {
-		for (Figura figura : listaFiguras) {
-			figura.toString();
-		}
-	}
-
 	public ArrayList<Figura> listaConCapa() {
 		ArrayList<Figura> listaCapa = new ArrayList<>();
 
